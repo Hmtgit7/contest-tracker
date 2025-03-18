@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+
+/* Platform icons */
+.codeforces-icon {
+    background-image: url('../src//assests/leetcode-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.codechef-icon {
+    background-image: url('../src//assests/codechef.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.leetcode-icon {
+    background-image: url('../src//assests/codeforces.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: theme('colors.gray.100');
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: theme('colors.gray.800');
+}
+
+::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.400');
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.600');
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.500');
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.500');
+}
+
+/* Custom focus styles */
+@layer base {
+    *:focus {
+        @apply outline-none ring-2 ring-indigo-500 ring-opacity-50;
+    }
+}
+
+/* Smooth transitions for theme switching */
+.transition-colors,
+.transition-bg {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Base body styles */
+body {
+    @apply antialiased text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-900;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Add responsive container padding */
+@media (max-width: 640px) {
+    .container {
+        @apply px-4;
+    }
+}
