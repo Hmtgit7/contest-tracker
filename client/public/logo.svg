@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="#f5f5f7" />
+  
+  <!-- Decorative Rings -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#3498db" stroke-width="6" />
+  <circle cx="200" cy="200" r="160" fill="none" stroke="#2ecc71" stroke-width="4" stroke-dasharray="12,8" />
+  
+  <!-- Trophy Cup -->
+  <path d="M170 140 L230 140 L230 200 C230 220 210 230 200 230 C190 230 170 220 170 200 Z" fill="#f1c40f" />
+  <path d="M170 140 L230 140 L230 200 C230 220 210 230 200 230 C190 230 170 220 170 200 Z" fill="none" stroke="#e67e22" stroke-width="3" />
+  
+  <!-- Trophy Handles -->
+  <path d="M170 160 C150 160 150 180 170 180" fill="none" stroke="#e67e22" stroke-width="6" />
+  <path d="M230 160 C250 160 250 180 230 180" fill="none" stroke="#e67e22" stroke-width="6" />
+  
+  <!-- Trophy Base -->
+  <rect x="185" y="230" width="30" height="15" fill="#e67e22" />
+  <rect x="175" y="245" width="50" height="10" fill="#e67e22" />
+  
+  <!-- Check Mark -->
+  <path d="M185 190 L200 210 L240 160" fill="none" stroke="#2ecc71" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Bar Chart -->
+  <rect x="140" y="260" width="20" height="40" fill="#3498db" rx="3" />
+  <rect x="170" y="270" width="20" height="30" fill="#3498db" rx="3" />
+  <rect x="200" y="250" width="20" height="50" fill="#3498db" rx="3" />
+  <rect x="230" y="280" width="20" height="20" fill="#3498db" rx="3" />
+  
+  <!-- Tracking Line -->
+  <path d="M120 300 C140 270, 160 290, 180 280 C200 270, 220 260, 240 290 C260 320, 280 300, 300 290" fill="none" stroke="#e74c3c" stroke-width="4" />
+  
+  <!-- Tracking Points -->
+  <circle cx="140" cy="285" r="5" fill="#e74c3c" />
+  <circle cx="180" cy="280" r="5" fill="#e74c3c" />
+  <circle cx="220" cy="275" r="5" fill="#e74c3c" />
+  <circle cx="260" cy="305" r="5" fill="#e74c3c" />
+</svg>

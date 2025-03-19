@@ -17,10 +17,11 @@ const Navbar = () => {
                 <div className="flex justify-between items-center py-4">
                     {/* Logo */}
                     <Link to="/" className="flex items-center">
+                        <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="text-xl font-bold text-indigo-600 dark:text-indigo-400"
+                            className="text-xl font-bold text-indigo-600 dark:text-indigo-400 ml-2"
                         >
                             Contest Tracker
                         </motion.div>
