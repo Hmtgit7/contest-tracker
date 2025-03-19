@@ -182,7 +182,62 @@ Users can toggle between light and dark modes using:
 - The theme toggle button in the navigation bar
 - Their profile preferences page (persists across sessions)
 
-## Deployment
+# Deployment
+
+### Deploying to Render
+
+#### 1. Backend Deployment
+1. Go to Render.
+2. Click **"New +"** → **"Web Service"**.
+3. Select your **GitHub repository**.
+4. Set the **Root Directory** to `/server`.
+5. Use the following commands:
+   * **Build Command:**
+   ```bash
+   npm install
+   ```
+   * **Start Command:**
+   ```bash
+   node src/index.js # Replace with your entry file
+   ```
+6. Add environment variables:
+   * Go to **Environment Variables** → **Add from .env**
+   * Or manually add:
+   ```bash
+   MONGO_URI=your_mongodb_atlas_uri
+   JWT_SECRET=your_secret_key
+   YOUTUBE_API_KEY=your_youtube_api_key
+   ```
+7. Click **"Create Web Service"** and wait for the deployment to finish.
+
+#### 2. Frontend Deployment
+1. Go to Render.
+2. Click **"New +"** → **"Static Site"**.
+3. Select your **GitHub repository**.
+4. Set the **Root Directory** to `/client`.
+5. Use the following commands:
+   * **Build Command:**
+   ```bash
+   npm install && npm run build
+   ```
+   * **Publish Directory:**
+   ```bash
+   client/build
+   ```
+6. Add environment variables:
+   * Go to **Environment Variables** and add:
+   ```bash
+   REACT_APP_BACKEND_URL=https://contest-tracker-backend.onrender.com
+   ```
+7. Click **"Create Static Site"** and wait for the deployment to finish.
+
+#### 3. Final Steps
+* Your app will be live at:
+   * **Backend:** `https://contest-tracker-backend.onrender.com`
+   * **Frontend:** `https://contest-tracker-frontend.onrender.com`
+* Ensure CORS is properly configured on the backend.
+
+<!-- ## Deployment
 
 ### Deploying to Heroku
 
@@ -206,7 +261,7 @@ Users can toggle between light and dark modes using:
 4. Deploy to Heroku
    ```bash
    git push heroku main
-   ```
+   ``` -->
 
 ## Future Enhancements
 
